@@ -260,7 +260,7 @@ preLoader = setInterval(preLoaderCheck, 20);
 
 //Load spritesheet
 spriteSheet = new Image();
-spriteSheet.src = "sheet.png";
+spriteSheet.src = "design/img/sheet.png";
 spriteSheet.ready = false;
 spriteSheet.onload = setAssetReady;
 
