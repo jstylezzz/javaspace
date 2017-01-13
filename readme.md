@@ -17,3 +17,13 @@ Difficulty will increase approx. each 36 seconds. Difficulty modifier is display
 
 Max amount of enemies active in the game is difficulty modifier + 4.
 
+
+#############
+
+## Improvements for future versions ##
+
+* Add music and sound effects
+* Add hit effect (sprite blinking and sound)
+* Add powerups (shield with variable shock absorbation shown by sprites, extra lifes shown by extra sprites, health pickup)
+* Add number sprites when enemy is killed to show amount of score given
+* Add more enemies
