@@ -6,8 +6,8 @@
 	</head>
 	<body>
 	<canvas id="gameCanvas"></canvas>
-		<script type="text/javascript" src="game.js"></script>
-    <script type="text/javascript" src="testScript.js"></script>
+	<script type="text/javascript" src="backend/game.js"></script>
+	
 	<div id="scorediv" style="float: right; text-align: center; width: 36%; height: 80%; overflow: horizontal; background-color: #6699ff;">
 		<h2>Highscore</h2>
 		
@@ -20,7 +20,7 @@
 				<td><b>Level (4 is start level)</b></td>
 			</tr>
 		<?php
-		include("sqlCredentials.php");
+		include("backend/sqlCredentials.php");
 		$scoreData = null;
 		$records = 0;
 		$con = mysqli_connect($SQL_HOST, $SQL_USER, $SQL_PASS, $SQL_DB);

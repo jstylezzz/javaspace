@@ -788,7 +788,7 @@ function ShowGameOverScreen()
 				var data = request.responseText;
 			}
 			
-			httpGetAsync("sendscore.php?pName=" + name + "&pScore=" + playerScore + "&pLevel=" + enemyModifier + "&pShots=" + shotsFired + "&pTime=" + secondsPlayed);
+			httpGetAsync("backend/sendscore.php?pName=" + name + "&pScore=" + playerScore + "&pLevel=" + enemyModifier + "&pShots=" + shotsFired + "&pTime=" + secondsPlayed);
 			alert("Your score has been sent.");
 		}
 		else
