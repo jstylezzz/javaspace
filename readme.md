@@ -1,5 +1,8 @@
 #########
 
+## LIVE DEMO! ##
+You can read more about this project [on my portfolio](http://jarisenhorst.com/?p=pentry&id=29), there is also a (slightly modified) playable version of the game there. You can also play the full original (exact copy from this repo) on the [external page](http://jstylezzz.com/portfolio/jscriptGame/).
+
 ## BASE SCORE ##
 Enemy blue gives 4 score and is pretty fast
 
