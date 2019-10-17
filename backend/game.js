@@ -474,6 +474,7 @@ function DropPowerup(posx, posy)
 	if(chance <= 5)
 	{
 		powerups.push(new Powerup(GetRandomInt(0, 2), posx, posy));
+		PlayAudio('pickup_spawn.wav');
 	}
 }
 
@@ -522,12 +523,14 @@ function update()
 		bullets.push(new Bullet(player.x, player.y, 1));
 		gunEnergy -= 75;
 		bulletPowerup--;
+		PlayAudio('weapon_fire.wav');
 	}
 	else if(gunEnergy > 65 && bulletPowerup < 1)
 	{
 		bullets.push(new Bullet(player.x, player.y, 0));
 		gunEnergy -= 65;
 		shotsFired++;
+		PlayAudio('weapon_fire.wav');
 	}
 	
   }
@@ -624,6 +627,8 @@ function update()
 			totalEnemies--;
 			i--;
 			playerHealth--;
+
+			PlayAudio('player_damage.wav');
 		}
 	}
 	
@@ -636,6 +641,8 @@ function update()
 			if(powerups[i].type == 0) playerHealth++;
 			else if(powerups[i].type == 1) bulletPowerup = 5;
 			
+			PlayAudio('pickup_take.wav');
+
 			powerups.splice(i, 1);
 			i--;
 		}
@@ -830,4 +837,10 @@ function httpGetAsync(theUrl)
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.open("GET", theUrl, true); // true for asynchronous 
     xmlHttp.send(null);
+}
+
+function PlayAudio(audio)
+{
+	var audioSample = new Audio("backend/audio/" + audio);
+	audioSample.play();	
 }
